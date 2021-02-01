@@ -1,0 +1,13 @@
+---
+title: "About this site"
+description: |
+  Description of how the site was built, for proper attribution
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+This site was developed in [R Markdown](https://rmarkdown.rstudio.com/); two packages were heavily used: the [distill](https://rstudio.github.io/distill/) package, by Allaire et al^[Allaire, et al. (2018, Sept. 10). Distill for R Markdown. Retrieved from https://rstudio.github.io/distill]; and the [postcards](https://github.com/seankross/postcards) package, by [Sean Kross](https://twitter.com/seankross).
+
+The ["M-F-E-O: postcards + distill"](https://alison.rbind.io/post/2020-12-22-postcards-distill/) tutorial by [Alison Hill](https://alison.rbind.io/about/) was instrumental in guiding the development of the website. My sincere thanks to all of the developers of the above packages, as well as the author of the tutorial, for democratising the process of making websites!

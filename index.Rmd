@@ -1,0 +1,25 @@
+---
+title: "Paul-Enguerrand Fady"
+description: |
+  Paul-Enguerrand Fady's R Markdown website
+image: "pec.jpg"
+links:
+  - label: Twitter
+    url: "https://twitter.com/FadyPEC"
+  - label: ResearchGate
+    url: "https://www.researchgate.net/profile/Paul_Enguerrand_Fady"
+  - label: LinkedIn
+    url: "https://linkedin.com/in.fadyp"
+  - label: ORCiD
+    url: "https://orcid.org/0000-0002-8442-1966"    
+  - label: Email
+    url: "mailto:paul-enguerrand.fady@kcl.ac.uk"
+output:
+  postcards::trestles
+site: distill::distill_website
+---
+ 
+I am a PhD candidate in antimicrobial resistance, supervised by scientists in the KCL Institute of Pharmaceutical Science and Public Health England. 
+
+In my spare time, I like petting cats, brewing, and baking!
+
