@@ -19,7 +19,7 @@ output:
 site: distill::distill_website
 ---
  
-I am a PhD candidate in antimicrobial resistance, supervised by scientists in the KCL Institute of Pharmaceutical Science and Public Health Scotland 
+I am a PhD candidate in antimicrobial resistance, supervised by scientists in the KCL Institute of Pharmaceutical Science and Public Health England. 
 
 In my spare time, I like petting cats,^[My own as well as others!] brewing,^[Only cider and mead thus far, but hope to try beer soon :)] and baking!^[Mostly bread because cakes are hard...]
 
