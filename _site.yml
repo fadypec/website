@@ -2,7 +2,7 @@ name: "."
 title: "Welcome"
 description: |
   Welcome
-output_dir: "https://github.com/fadypec/website"
+output_dir: "docs"
 navbar:
   right:
     - text: "Home"
