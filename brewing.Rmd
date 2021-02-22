@@ -17,8 +17,6 @@ brew <- read_csv("brewing.csv")
 brew2 <- brew %>%
     mutate(lab_ypos = cumsum(Litres_brewed) - 0.5 * Litres_brewed) 
 
-brew2
-
 p <- ggplot(data=brew2, aes(x=Beverage, y=Litres_brewed,fill=Additives1)) +
   geom_bar(stat="identity")+
   geom_text(aes(y = lab_ypos, label=Litres_brewed), color="white", size=3.5)+
