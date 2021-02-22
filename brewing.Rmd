@@ -4,6 +4,7 @@ description: "A small page showing the status of various brews over time"
 ---
 ```{R setup, echo=FALSE}
 library(tidyverse)
+library(ggpattern)
 ```
 
 This is just a little page about brewing I hope to add to over time.
@@ -17,13 +18,13 @@ brew <- read_csv("brewing.csv")
 brew2 <- brew %>%
     mutate(lab_ypos = cumsum(Litres_brewed) - 0.5 * Litres_brewed) 
 
-p <- ggplot(data=brew2, aes(x=Beverage, y=Litres_brewed,fill=Additives1)) +
+p <- ggplot(data=brew2, aes(x=Beverage, y=Litres_brewed,fill=Additive1_Type)) +
   geom_bar(stat="identity")+
   geom_text(aes(y = lab_ypos, label=Litres_brewed), color="white", size=3.5)+
   theme_classic()+
   labs(title = "Cumulative brewing to date", y = "Litres brewed",
-       x = "Beverage", fill = "Additives")
-  # scale_fill_manual(values=c("lightgoldenrod2", "springgreen4", "darkgoldenrod3"))
+       x = "Beverage", fill = "Additives")+
+  scale_fill_manual(values=c("lightcoral","gray71",  "darkgoldenrod3"))
 
 p
 ```

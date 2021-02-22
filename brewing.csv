@@ -1,6 +1,6 @@
-Beverage,Litres_brewed,Additives1,Additives2,Date
-Cider,27,None,None,2021-01-16
-Mead,2,None,None,2021-01-16
-Mead,.75,Maple syrup,None,2021-01-16
-Beer,0,None,None,NA
-Cider,27,Mango,Citra hops,2021-02-21
+Beverage,Litres_brewed,Additive1,Additive1_Type,Additive2,Additive2_Type,Date
+Cider,27,None,None,None,None,16/01/2021
+Mead,2,None,None,None,None,16/01/2021
+Mead,0.75,Maple syrup,Sweetener,None,None,16/01/2021
+Beer,0,None,None,None,None,NA
+Cider,27,Mango,Fruit,Citra hops,Hops,21/02/2021
