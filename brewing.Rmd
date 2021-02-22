@@ -6,7 +6,7 @@ description: "A small page showing the status of various brews over time"
 library(tidyverse)
 ```
 
-This is just a little page about brewing I hope to add to over time. 
+This is just a little page about brewing I hope to add to over time.
 
 Currently, it lists how much of each type of beverage I have brewed. 
 Note that since I only started doing so recently, volumes thus far are tiny!
@@ -14,12 +14,18 @@ Note that since I only started doing so recently, volumes thus far are tiny!
 ```{R Cumulative brewing, echo=FALSE}
 brew <- read_csv("brewing.csv")
 
-p <- ggplot(data=brew, aes(x=Beverage, y=Litres_brewed,fill=Beverage)) +
+brew2 <- brew %>%
+    mutate(lab_ypos = cumsum(Litres_brewed) - 0.5 * Litres_brewed) 
+
+brew2
+
+p <- ggplot(data=brew2, aes(x=Beverage, y=Litres_brewed,fill=Additives1)) +
   geom_bar(stat="identity")+
-  geom_text(aes(label=Litres_brewed), vjust=1.6, color="white", size=3.5)+
+  geom_text(aes(y = lab_ypos, label=Litres_brewed), color="white", size=3.5)+
   theme_classic()+
-  labs(title = "Cumulative brewing to date")+
-  scale_fill_manual(values=c("lightgoldenrod2", "springgreen4", "darkgoldenrod3"))
+  labs(title = "Cumulative brewing to date", y = "Litres brewed",
+       x = "Beverage", fill = "Additives")
+  # scale_fill_manual(values=c("lightgoldenrod2", "springgreen4", "darkgoldenrod3"))
 
 p
 ```
